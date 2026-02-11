@@ -1,8 +1,10 @@
 package com.example.examen.ui.screens
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ExitToApp
 import androidx.compose.material.icons.filled.Delete
@@ -11,7 +13,6 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -97,7 +98,6 @@ fun JugadorCard(jugador: Jugador, onDelete: () -> Unit) {
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(200.dp),
-                contentScale = ContentScale.Crop
             )
 
             Row(
@@ -110,7 +110,11 @@ fun JugadorCard(jugador: Jugador, onDelete: () -> Unit) {
                     text = jugador.numero.toString(),
                     fontSize = 32.sp,
                     fontWeight = FontWeight.Bold,
+                    color =(Color.White) ,
                     modifier = Modifier.padding(end = 16.dp)
+                        .background(Color(0xFF27D21F), shape = CircleShape)
+                        .padding(16.dp)
+
                 )
                 Column(modifier = Modifier.weight(1f)) {
                     Text(text = jugador.nombre, fontWeight = FontWeight.Bold, fontSize = 18.sp)

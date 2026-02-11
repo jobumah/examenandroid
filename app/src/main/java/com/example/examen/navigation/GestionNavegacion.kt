@@ -34,7 +34,6 @@ fun GestionNavegacion(auth: FirebaseAuth) {
                         },
                         onLogout = {
                             auth.signOut()
-                            // Limpiamos la pila y volvemos al login siguiendo tu estructura
                             while (pilaNavegacion.size > 1) {
                                 pilaNavegacion.removeLastOrNull()
                             }
