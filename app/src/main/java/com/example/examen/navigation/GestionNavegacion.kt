@@ -1,5 +1,6 @@
 package com.example.examen.navigation
 
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.navigation3.runtime.NavEntry
 import androidx.navigation3.runtime.rememberNavBackStack
@@ -33,10 +34,12 @@ fun GestionNavegacion(auth: FirebaseAuth) {
                         },
                         onLogout = {
                             auth.signOut()
-                            while (pilaNavegacion.size > 0) {
+                            // Limpiamos la pila y volvemos al login siguiendo tu estructura
+                            while (pilaNavegacion.size > 1) {
                                 pilaNavegacion.removeLastOrNull()
                             }
                             pilaNavegacion.add(Routes.Login)
+                            pilaNavegacion.removeAt(0)
                         }
                     )
                 }
@@ -46,6 +49,9 @@ fun GestionNavegacion(auth: FirebaseAuth) {
                             pilaNavegacion.removeLastOrNull()
                         }
                     )
+                }
+                else -> NavEntry(Routes.Error) {
+                    Text("Error: Ruta no encontrada")
                 }
             }
         }

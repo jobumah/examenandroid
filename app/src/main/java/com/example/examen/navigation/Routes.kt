@@ -12,4 +12,7 @@ sealed class Routes : NavKey {
 
     @Serializable
     data object NuevoJugador : Routes()
+
+    @Serializable
+    data object Error : Routes()
 }
