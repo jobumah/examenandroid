@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "731593859623",
+    "project_id": "unicaja-89978",
+    "storage_bucket": "unicaja-89978.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:731593859623:android:ccefae9b72de375c452402",
+        "android_client_info": {
+          "package_name": "com.example.examen"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBx1LVkuqFxD1hvdEbT62OdA1wvJa7r9BA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
